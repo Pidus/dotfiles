@@ -1,0 +1,16 @@
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+# / was on /dev/sda2 during installation
+UUID=481d8dcd-a072-4d42-b37d-698177787b80 /               ext4    errors=remount-ro,noatime 0       1
+
+# /boot/efi was on /dev/sda1 during installation
+UUID=27F9-999F  /boot/efi       vfat    umask=0077      0       1
+
+# /home was on /dev/sda6 during installation
+UUID=f9488465-8260-4b4d-b0d2-b5bf19ef9875 /home           ext4    noatime        0       2
+
+# swap was on /dev/sda7 during installation
+UUID=28da6b3f-2894-4aad-b65b-bb96dacba1ab none            swap    sw              0       0
+
+tmpfs /tmp tmpfs noatime,nosuid,nodev,mode=1777,size=1024M 0 0
+#tmpfs /home/pidus/.cache/chromium noatime,nosuid,nodev,mode=1777,size=2048M 0 0
